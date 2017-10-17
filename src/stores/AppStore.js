@@ -2,10 +2,12 @@ import { observable } from 'mobx'
 
 
 class AppStore {
-  // @observable loading = true
+  @observable loading = true
 
   constructor () {
-    // this.loading = false
+    setTimeout(() => {
+      this.loading = false
+    }, 2000);
   }
 }
 

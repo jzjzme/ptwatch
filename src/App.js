@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Provider as MobxProvider, observer } from 'mobx-react'
 import logo from './logo.svg';
 import './App.css';
+import { Loading } from 'components'
 
 
 export const App = observer(({ store }) => store.loading ? <Loading /> : (
@@ -18,4 +19,4 @@ export const App = observer(({ store }) => store.loading ? <Loading /> : (
   </MobxProvider>
 ))
 
-const Loading = () => <h1>Loading...</h1>
+// const Loading = () => <h1>Loading...</h1>
