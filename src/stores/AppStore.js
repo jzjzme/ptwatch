@@ -4,7 +4,6 @@ import UserStore from './UserStore'
 
 class AppStore {
   @observable loading = true
-  user = {}
 
   constructor () {
     this.user = new UserStore()
