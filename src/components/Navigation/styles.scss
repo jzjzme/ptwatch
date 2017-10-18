@@ -1,0 +1,17 @@
+
+.nav {
+  background-color: white;
+  box-shadow: 0 0px 15px -5px rgba(0, 0, 0, 0.5);
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: {
+    left: 1rem;
+    right: 1rem;
+  }
+}
+
+.logo {
+  height: 30px;
+}

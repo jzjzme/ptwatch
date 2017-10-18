@@ -154,6 +154,37 @@ module.exports = {
               cacheDirectory: true,
             },
           },
+
+          // Load scss
+          { // Sass
+            test: /\.scss$/,
+            use: [
+              { // Create style nodes from JS strings
+                loader: "style-loader"
+              },
+              
+              { // Translate CSS into CommonJS
+                loader: "css-loader",
+                query: {
+                  modules: true,
+                  sourceMap: true,
+                  localIdentName: "[name]__[local]__[hash:base64:6]"
+                }
+              },
+
+              { // Autoprefixer
+                loader: "postcss-loader",
+                options: {
+                  plugins: () => [autoprefixer]
+                }
+              },
+
+              { // Compile Sass to CSS
+                loader: "sass-loader"
+              }
+            ]
+          },
+
           // "postcss" loader applies autoprefixer to our CSS.
           // "css" loader resolves paths in CSS and adds assets as dependencies.
           // "style" loader turns CSS into JS modules that inject <style> tags.
