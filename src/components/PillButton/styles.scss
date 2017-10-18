@@ -1,12 +1,45 @@
 
 .button {
+  transition: all 0.15s ease-in-out;
+  height: 30px;
+  font-weight: bold;
+  text: {
+    transform: uppercase;
+    shadow: 0 1px 0.5px rgba(#30C579, 0.3);
+  }
+  box-shadow: 0 3px 5px -3px rgba(0, 0, 0, 0.3);
+  letter-spacing: 1px;
   color: white;
   background: {
-    color: blue;
-    image: linear-gradient(blue, green);
+    color: #30C579;
+    image: linear-gradient(45deg, #FFFF8E, #30C579);
   }
   padding: {
     left: 1rem;
     right: 1rem;
+  }
+  border: 0 {
+    radius: 50px;
+  }
+  cursor: pointer;
+
+  &:hover {
+    box-shadow: 0 5px 10px -5px rgba(0, 0, 0, 0.3);
+    text-shadow: 0 1px 0.5px rgba(darken(#30C579, 10%), 0.4);
+  }
+
+  &.mHollow {
+    box-shadow: transparent;
+    border: 1px solid #30C579;
+    color: #30C579;
+    text-shadow: none;
+    background: {
+      color: transparent;
+      image: none;
+    }
+
+    &:hover {
+       box-shadow: 0 5px 10px -5px rgba(0, 0, 0, 0.3);
+    }
   }
 }

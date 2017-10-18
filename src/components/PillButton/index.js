@@ -5,10 +5,12 @@ import styles from "./styles.scss"
 
 export class PillButton extends Component {
   render () {
-    const { className, children, to } = this.props
+    const { className, children, to, hollow } = this.props
+
+    const buttonClassName = `${styles.button} ${hollow && styles.mHollow}`
 
     return (
-      <Link to={to}><button className={`${styles.button} ${className}`}>{children}</button></Link>
+      <Link to={to} className={className}><button className={buttonClassName}>{children}</button></Link>
     )
   }
 }

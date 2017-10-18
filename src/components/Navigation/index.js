@@ -12,8 +12,8 @@ export class Navigation extends Component {
           <Logo className={styles.logo} />
         </Link>
         <div>
-          <PillButton hollow="true" to="/">Log In</PillButton>
-          <PillButton to="/">Sign Up</PillButton>
+          <PillButton hollow="true" to="/" className={styles.button}>Log In</PillButton>
+          <PillButton to="/" className={styles.button}>Sign Up</PillButton>
         </div>
       </nav>
     )
