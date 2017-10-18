@@ -5,7 +5,9 @@ A simple wrapper for the Google Flights search API.
 Create a new application in the [Google API Console](https://console.developers.google.com) to obtain an API key.  
 Check out the [API documentation](https://developers.google.com/qpx-express/v1/trips/search).
 
-
+--KENT 
+## TO USE
+use flightscanner.py it has the json export needed
 ## Install
 
 ```
@@ -20,31 +22,6 @@ cd pyflights
 virtualenv env
 source env/bin/activate
 pip install -r requirements.txt
-```
-
-## Usage
-
-```python
-from pyflights import PyFlight
-
-flight = PyFlight(api_key='your_api_key')
-
-search = flight.search(params={
-        'adult_count': 1,
-        'origin': 'DUB',
-        'max_price': 'EUR500',
-        'destination': 'GDN',
-        'date': 'enter departure date here',
-        'solutions': 1
-})
-
-for results in search:
-    print 'Sale total: %s' % results.sale_total()
-    print 'Flight carrier: %s' % results.flight_carrier()
-    print 'Origin: %s' % results.origin()
-    print 'Destination: %s' % results.destination()
-    print 'Deparure Time: %s' % results.departure_time()
-    print 'Arrival Time: %s' % results.arrival_time()
 ```
 
 ## Required Search Parameters
