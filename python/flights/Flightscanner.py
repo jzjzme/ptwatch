@@ -30,4 +30,7 @@ for results in search:
         'price' : results.sale_total()},
         sort_keys=True, indent=4, separators=(',',': '))
 
-print(output)
+# print(output)
+
+with open('jsondata.txt', 'w') as f:
+  json.dump(output, f, ensure_ascii=False)
