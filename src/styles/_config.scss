@@ -1,0 +1,5 @@
+
+$color--white: #FFFFFF;
+$color--yellow-pale: #FFFF8E;
+$color--green: #30C579;
+$color--green-warm: lighten(adjust-hue($color--green, -45deg), 20%);
