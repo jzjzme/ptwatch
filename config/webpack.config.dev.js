@@ -88,6 +88,7 @@ module.exports = {
     extensions: ['.web.js', '.js', '.json', '.web.jsx', '.jsx'],
     alias: {
       components$: sources('../src/components'),
+      utils$: sources('../src/utils'),
       // Support React Native Web
       // https://www.smashingmagazine.com/2016/08/a-glimpse-into-the-future-with-react-native-for-web/
       'react-native': 'react-native-web',
@@ -162,7 +163,7 @@ module.exports = {
               { // Create style nodes from JS strings
                 loader: "style-loader"
               },
-              
+
               { // Translate CSS into CommonJS
                 loader: "css-loader",
                 query: {

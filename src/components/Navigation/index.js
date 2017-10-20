@@ -12,7 +12,7 @@ export class Navigation extends Component {
           <Logo className={styles.logo} />
         </Link>
         <div>
-          <PillButton hollow="true" to="/" className={styles.button}>Log In</PillButton>
+          <PillButton hollow="true" to="/login" className={styles.button}>Log In</PillButton>
           <PillButton to="/" className={styles.button}>Sign Up</PillButton>
         </div>
       </nav>
