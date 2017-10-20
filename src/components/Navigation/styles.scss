@@ -1,14 +1,16 @@
 
+@import "../../styles/base";
+
 .nav {
   background-color: white;
   box-shadow: 0 0px 15px -5px rgba(0, 0, 0, 0.5);
-  height: 60px;
+  height: $navigation--height;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: {
-    left: 1rem;
-    right: 1rem;
+    left: 2rem;
+    right: 2rem;
   }
 }
 

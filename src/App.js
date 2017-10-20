@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Provider as MobxProvider, observer } from 'mobx-react'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import { Home, Flights, Login, PointsDashboard } from './pages'
