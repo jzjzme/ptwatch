@@ -26,6 +26,7 @@
   }
   cursor: pointer;
   position: relative;
+  overflow: hidden;
 
   &:after {
     transition: 0.15s opacity ease-in-out;
