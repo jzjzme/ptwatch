@@ -1,5 +1,5 @@
 import React from 'react'
-import { Page, PillButton, Card, CardGroup, Navigation as Navbar } from 'components'
+import { Page, PillButton, Card, CardGroup } from 'components'
 import { clientID } from 'utils'
 import capitalOneLogo from "../../img/capital-one-logo.png"
 
@@ -10,7 +10,6 @@ const capitalOneLoginURL = `https://api-sandbox.capitalone.com/oauth2/authorize?
 
 const Login = () => (
   <Page>
-    <Navbar />
     <div className={styles.wrapper}>
       <CardGroup>
         <Card>

@@ -1,6 +1,4 @@
-import styled from 'styled-components'
 
+import React from "react"
 
-export const Page = styled.div`
-  height: 100vh;
-`
+export const Page = ({ children }) => (<div>{children}</div>)

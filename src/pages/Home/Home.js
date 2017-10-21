@@ -1,15 +1,14 @@
 import React from 'react'
 import { withRouter } from 'react-router-dom'
 import { observer, inject } from 'mobx-react'
-import { Page, Navigation, PillButton, PillInput } from 'components'
+import { Page, PillButton, PillInput } from 'components'
 import styles from "./styles.scss"
 
 const Home = observer(({ store: { user, flight }, history }) => (
   <Page>
-    <Navigation />
     <section className={styles.splash}>
       <div className={styles.splashCopy}>
-        <h1 className={styles.header}>Buy flights for cheap with no extra hassle.</h1>
+        <h1 className={styles.header}>Buy flights for cheap without any extra hassle.</h1>
         <h2 className={styles.subHeader}>This is the subheader that nobody reads everrrrrr.</h2>
       </div>
       <div className={styles.searchWrapper}>
