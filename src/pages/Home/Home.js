@@ -1,7 +1,7 @@
 import React from 'react'
 import { withRouter } from 'react-router-dom'
 import { observer, inject } from 'mobx-react'
-import { Page, Navigation, PillButton, PillInput, LogoMark } from 'components'
+import { Page, Navigation, PillButton, PillInput } from 'components'
 import styles from "./styles.scss"
 
 const Home = observer(({ store: { user, flight }, history }) => (
