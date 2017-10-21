@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { observer, inject } from 'mobx-react'
 import { stringify } from 'query-string'
-import { Page, Card, CardGroup, Navigation as Navbar, Loading } from 'components'
+import { Page, Card, CardGroup, Loading } from 'components'
 import { clientID, clientSecret } from 'utils'
 import styles from "./styles.scss"
 
@@ -48,10 +48,9 @@ export default class PointsDashboard extends Component {
     if (this.state.loading) return <Loading />
     return (
       <Page>
-        <Navbar />
         <CardGroup>
           <Card>
-            <h1>Welcome to your points dashboard!</h1>
+            <h1>Welcome to your dashboard!</h1>
             <p>This is where you can view and sell the points you have available.</p>
           </Card>
           <Card>

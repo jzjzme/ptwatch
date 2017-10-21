@@ -12,10 +12,14 @@
   }
 
   h1 {
+    @extend %h1;
+
     color: $color--dark-gray;
   }
 
   h2 {
+    @extend %h2;
+    
     color: $color--gray;
   }
 
