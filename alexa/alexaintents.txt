@@ -13,33 +13,33 @@
       "samples": []
     },
     {
-      "name": "MyColorIsIntent",
+      "name": “CategoryIsIntent",
       "samples": [
-        "my favorite color is {Color}"
+        “The current shopping Category is {Category}"
       ],
       "slots": [
         {
-          "name": "Color",
-          "type": "LIST_OF_COLORS",
+          "name": "Category",
+          "type": "LIST_OF_CategoryS",
           "samples": []
         }
       ]
     },
     {
-      "name": "WhatsMyColorIntent",
+      "name": "WhatsMyCategoryIntent",
       "samples": [
-        "what's my favorite color",
-        "what is my favorite color",
-        "what's my color",
-        "what is my color",
-        "my color",
-        "my favorite color",
-        "get my color",
-        "get my favorite color",
-        "give me my favorite color",
-        "give me my color",
-        "what my color is",
-        "what my favorite color is",
+        "what Category do you want to buy“,
+        "what is my favorite Category",
+        "what's my Category",
+        "what is my Category",
+        "my Category",
+        "my  Category",
+        "get my Category",
+        "get my Category now”,
+        "give me my favorite Category",
+        "give me my Category",
+        "what my Category is",
+        "what my favorite Category is",
         "yes",
         "yup",
         "sure",
@@ -50,72 +50,37 @@
   ],
   "types": [
     {
-      "name": "LIST_OF_COLORS",
+      "name": "LIST_OF_CategoryS",
       "values": [
         {
           "id": null,
           "name": {
-            "value": "green",
+            "value": “Entertainment”,
             "synonyms": []
           }
         },
         {
           "id": null,
           "name": {
-            "value": "red",
+            "value": “Travel”,
             "synonyms": []
           }
         },
         {
           "id": null,
           "name": {
-            "value": "blue",
+            "value": “Gift Cards“,
             "synonyms": []
           }
         },
         {
           "id": null,
           "name": {
-            "value": "orange",
+            "value": “misc”,
             "synonyms": []
           }
         },
-        {
-          "id": null,
-          "name": {
-            "value": "gold",
-            "synonyms": []
-          }
-        },
-        {
-          "id": null,
-          "name": {
-            "value": "silver",
-            "synonyms": []
-          }
-        },
-        {
-          "id": null,
-          "name": {
-            "value": "yellow",
-            "synonyms": []
-          }
-        },
-        {
-          "id": null,
-          "name": {
-            "value": "black",
-            "synonyms": []
-          }
-        },
-        {
-          "id": null,
-          "name": {
-            "value": "white",
-            "synonyms": []
-          }
-        }
-      ]
+             ]
     }
   ]
 }
