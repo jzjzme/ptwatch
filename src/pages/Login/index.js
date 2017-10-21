@@ -11,12 +11,20 @@ const capitalOneLoginURL = `https://api-sandbox.capitalone.com/oauth2/authorize?
 const Login = () => (
   <Page>
     <Navbar />
-    <PillButton
-      capitalOne={true}
-      onClick={() => window.location = capitalOneLoginURL}>
-      <img src={capitalOneLogo} alt="Capital One Logo" className={styles.capLogo} />
-      Log In
-    </PillButton>
+    <div className={styles.wrapper}>
+      <div className={styles.signInBox}>
+        <h1 className={styles.header}>Let's get started.</h1>
+        <h2 className={styles.subheader}>Sign up to start selling rewards points<br /> for cash!</h2>
+        <div className={styles.keyline} />
+        <PillButton
+          capitalOne={true}
+          className={styles.button}
+          onClick={() => window.location = capitalOneLoginURL}>
+          Sign in with
+          <img src={capitalOneLogo} alt="Capital One Logo" className={styles.capLogo} />
+        </PillButton>
+      </div>
+    </div>
   </Page>
 )
 

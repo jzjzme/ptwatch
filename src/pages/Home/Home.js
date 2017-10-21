@@ -9,7 +9,7 @@ const Home = observer(({ store: { user, flight }, history }) => (
     <Navigation />
     <section className={styles.splash}>
       <div className={styles.splashCopy}>
-        <h1 className={styles.header}>This is some marketing gibberish that spans two lines.</h1>
+        <h1 className={styles.header}>Buy flights for cheap with no extra hassle.</h1>
         <h2 className={styles.subHeader}>This is the subheader that nobody reads everrrrrr.</h2>
       </div>
       <div className={styles.searchWrapper}>

@@ -8,7 +8,7 @@ export class Navigation extends Component {
   render () {
     return (
       <nav className={styles.nav}>
-        <Link to="/">
+        <Link to="/" className={styles.logoLink}>
           <Logo className={styles.logo} />
         </Link>
         <div>

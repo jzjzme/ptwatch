@@ -1,7 +1,73 @@
 
 @import "../../styles/base";
 
+.wrapper {
+  height: calc(100vh - #{$navigation--height});
+  min-height: 700px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+
+  &:after {
+    content: "";
+    position: absolute;
+    top: -20px;
+    bottom: -20px;
+    left: -20px;
+    right: -20px;
+    filter: blur(5px);
+    background: {
+      color: $color--green;
+      image: linear-gradient(rgba($color--green, 0), rgba($color--green-warm, 0.1)),
+             linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+             url("../../img/splash.jpg");
+      size: cover;
+      position: center;
+      repeat: no-repeat;
+    }
+  }
+}
+
+.signInBox {
+  position: relative;
+  z-index: 1;
+  background-color: $color--white;
+  width: 600px;
+  border-radius: 5px;
+  box-shadow: 0 5px 10px -5px rgba(0, 0, 0, 0.3);
+  padding: $vertical-spacing--medium $horizontal-spacing--large $vertical-spacing--large;
+}
+
+.header {
+  @extend %h1;
+
+  color: $color--dark-gray;
+}
+
+.subheader {
+  @extend %h2;
+
+  color: $color--gray;
+}
+
+.keyline {
+  display: inline-block;
+    height: 1px;
+    width: 100px;
+    background-color: $color--light-gray;
+    margin: {
+      top: $vertical-spacing--large;
+      bottom: $vertical-spacing--medium;
+    }
+}
+
+.button {
+  width: 200px;
+}
+
 .capLogo {
   height: $navigation--height / 3;
-  margin-right: $horizontal-spacing--small;
+  margin-left: $horizontal-spacing--normal;
 }

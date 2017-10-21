@@ -3,17 +3,30 @@
 
 .splash {
   height: calc(100vh - #{$navigation--height});
+  min-height: 700px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  background: {
-    image: linear-gradient(rgba($color--green, 0), rgba($color--green-warm, 0.1)),
-          linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
-          url("../../img/splash.jpg");
-    size: cover;
-    position: center;
-    repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+
+  &:after {
+    content: "";
+    position: absolute;
+    top: -20px;
+    bottom: -20px;
+    left: -20px;
+    right: -20px;
+    background: {
+      color: $color--green;
+      image: linear-gradient(rgba($color--green, 0), rgba($color--green-warm, 0.1)),
+             linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+             url("../../img/splash.jpg");
+      size: cover;
+      position: center;
+      repeat: no-repeat;
+    }
   }
 }
 
@@ -21,6 +34,8 @@
   max-width: 700px;
   text-align: center;
   margin-bottom: $vertical-spacing--xlarge;
+  position: relative;
+  z-index: 1;
 }
 
 .logoMark {
@@ -42,6 +57,8 @@
 
 .searchWrapper {
   display: flex;
+  position: relative;
+  z-index: 1;
 }
 
 .input {
