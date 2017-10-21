@@ -1,4 +1,4 @@
-export * from './Loading'
+export * from './Loading/index'
 export * from './Page'
 export * from "./Logo"
 export * from "./Navigation"

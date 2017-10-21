@@ -33,7 +33,7 @@
 
   label {
     font: {
-      size: $font-size--normal;
+      size: 0.8rem;
       weight: bold;
     }
     letter-spacing: 1px;
@@ -45,7 +45,7 @@
 .cardGroup {
   position: relative;
   z-index: 1;
-  width: 650px;
+  width: 750px;
   margin: auto {
     top: $vertical-spacing--large;
     bottom: $vertical-spacing--medium;

@@ -57,8 +57,8 @@ export default class PointsDashboard extends Component {
             {rewardsAccountsDetails.map(({ accountDisplayName, rewardsBalance }) => (
               <div key={accountDisplayName} className={styles.cardColWrap}>
                 <div className={styles.cardCol1}>
-                  <label>{accountDisplayName}</label>
                   <h2 className={styles.pointsAvailable}>You have <b className={styles.points}>{rewardsBalance}</b> points available!</h2>
+                  <label>{accountDisplayName}</label>
                 </div>
                 <PillButton to="/">Sell Points Now!</PillButton>
               </div>
