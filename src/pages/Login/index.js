@@ -1,5 +1,5 @@
 import React from 'react'
-import { Page, PillButton, Navigation as Navbar } from 'components'
+import { Page, PillButton, Card, CardGroup, Navigation as Navbar } from 'components'
 import { clientID } from 'utils'
 import capitalOneLogo from "../../img/capital-one-logo.png"
 
@@ -12,18 +12,20 @@ const Login = () => (
   <Page>
     <Navbar />
     <div className={styles.wrapper}>
-      <div className={styles.signInBox}>
-        <h1 className={styles.header}>Let's get started.</h1>
-        <h2 className={styles.subheader}>Sign up to start selling rewards points<br /> for cash!</h2>
-        <div className={styles.keyline} />
-        <PillButton
-          capitalOne={true}
-          className={styles.button}
-          onClick={() => window.location = capitalOneLoginURL}>
-          Sign in with
-          <img src={capitalOneLogo} alt="Capital One Logo" className={styles.capLogo} />
-        </PillButton>
-      </div>
+      <CardGroup>
+        <Card>
+          <h1>Let's get started.</h1>
+          <h2>Sign up to start selling rewards points for cash!</h2>
+          <div className={styles.keyline} />
+          <PillButton
+            capitalOne={true}
+            className={styles.button}
+            onClick={() => window.location = capitalOneLoginURL}>
+            Sign in with
+            <img src={capitalOneLogo} alt="Capital One Logo" className={styles.capLogo} />
+          </PillButton>
+        </Card>
+      </CardGroup>
     </div>
   </Page>
 )
