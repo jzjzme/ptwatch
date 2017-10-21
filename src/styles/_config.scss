@@ -8,11 +8,12 @@ $multiplier--large:  pow($golden-ratio, 2);
 $multiplier--xlarge: pow($golden-ratio, 3);
 
 
-$color--white:       #FFFFFF;
-$color--light-gray:  #EAEAEA;
-$color--yellow-pale: #FFFF8E;
-$color--green:       #30C579;
-$color--green-warm:  lighten(adjust-hue($color--green, -45deg), 20%);
+$color--white:            #FFFFFF;
+$color--light-gray:       #EAEAEA;
+$color--yellow-pale:      #FFFF8E;
+$color--green:            #30C579;
+$color--green-warm:       lighten(adjust-hue($color--green, -45deg), 20%);
+$color--capital-one-blue: #004977;
 
 // Font sizing
 $font-size: 15px;

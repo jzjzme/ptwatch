@@ -9,4 +9,8 @@
   box-sizing: border-box;
   padding: $horizontal-spacing--small $vertical-spacing--normal;
   min-width: 180px;
+
+  &:focus {
+    outline: none;
+  }
 }

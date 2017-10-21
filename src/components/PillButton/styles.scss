@@ -27,6 +27,9 @@
   cursor: pointer;
   position: relative;
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   &:after {
     transition: 0.15s opacity ease-in-out;
@@ -54,6 +57,13 @@
     outline: none;
     box-shadow: 0 5px 10px -5px rgba(0, 0, 0, 0.3);
     text-shadow: 0 1px 0.5px rgba(darken($color--green, 10%), 0.4);
+  }
+
+  &.mCapitalOne {
+    background: {
+      color: $color--capital-one-blue;
+      image: none;
+    }
   }
 
   &.mHollow {
