@@ -2,9 +2,9 @@ import React, { Component } from 'react'
 import { observer } from 'mobx-react'
 import { observable } from 'mobx'
 import { stringify } from 'query-string'
-import { Page, Navigation as Navbar } from 'components'
+import { Page, Card, CardGroup, Navigation as Navbar } from 'components'
 import { clientID, clientSecret } from 'utils'
-
+import styles from "./styles.scss"
 
 @observer
 export default class PointsDashboard extends Component {
@@ -69,8 +69,15 @@ export default class PointsDashboard extends Component {
     return (
       <Page>
         <Navbar />
-        <h1>The CapitalOne Code: <code>{new URLSearchParams(search).get('code')}</code></h1>
-        WELCOME TO THE POINTS DASHBOARD :p
+        <CardGroup>
+          <Card>
+            <h1>Welcome to your points dashboard!</h1>
+            <p>This is where you can view and sell the points you have available.</p>
+          </Card>
+          <Card>
+            <h1>The CapitalOne Code: <code>{new URLSearchParams(search).get('code')}</code></h1>
+          </Card>
+        </CardGroup>
       </Page>
     )
   }
