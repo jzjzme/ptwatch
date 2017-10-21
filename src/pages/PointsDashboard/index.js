@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { observer, inject } from 'mobx-react'
 import { stringify } from 'query-string'
-import { Page, Card, CardGroup, Loading } from 'components'
+import { Page, Card, CardGroup, Loading, PillButton } from 'components'
 import { clientID, clientSecret } from 'utils'
 import styles from "./styles.scss"
 
@@ -55,8 +55,12 @@ export default class PointsDashboard extends Component {
           </Card>
           <Card>
             {rewardsAccountsDetails.map(({ accountDisplayName, rewardsBalance }) => (
-              <div key={accountDisplayName}>
-                <div>Your account <b>{accountDisplayName}</b> has <b>{rewardsBalance}</b> points available</div>
+              <div key={accountDisplayName} className={styles.cardColWrap}>
+                <div className={styles.cardCol1}>
+                  <label>{accountDisplayName}</label>
+                  <h2 className={styles.pointsAvailable}>You have <b className={styles.points}>{rewardsBalance}</b> points available!</h2>
+                </div>
+                <PillButton to="/">Sell Points Now!</PillButton>
               </div>
             ))}
           </Card>

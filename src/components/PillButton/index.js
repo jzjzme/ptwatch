@@ -10,7 +10,7 @@ export class PillButton extends Component {
 
     if (to) {
       return (
-        <Link to={to} className={className}>
+        <Link to={to} className={`${className} ${styles.linkWrapper}`}>
           <button className={buttonClassName}>{children}</button>
         </Link>
       )

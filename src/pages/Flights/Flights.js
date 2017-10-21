@@ -5,11 +5,13 @@ import { Page, Card, CardGroup } from 'components'
 
 const Flights = observer(({ store: { flight: { searchResults } } }) => (
   <Page>
-    {searchResults.trips.map((flight, i) => (
-      <div key={`${i}-${flight.di}`}>
-        {flight.departure_name}
-      </div>
-    ))}
+    <CardGroup>
+      {searchResults.trips.map((flight, i) => (
+        <Card key={`${i}-${flight.di}`}>
+          {flight.departure_name}
+        </Card>
+      ))}
+    </CardGroup>
   </Page>
 ))
 

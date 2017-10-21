@@ -1,6 +1,10 @@
 
 @import "../../styles/base";
 
+.linkWrapper {
+  text-decoration: none;
+}
+
 .button {
   transition: all 0.15s ease-in-out;
   height: $input--height;
