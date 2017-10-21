@@ -7,8 +7,8 @@ import json
 app = Flask(__name__)
 flight = PyFlight(api_key='AIzaSyBNFMQ6w1pnPwjAudfZw-iliHUucHRxqiA')
 
-@app.route('/flights', methods=['GET'])
-def flights():
+@app.route('/search', methods=['GET'])
+def search():
 	# examples parameters:
 	# adults = 1
 	# origin = 'SFO'
