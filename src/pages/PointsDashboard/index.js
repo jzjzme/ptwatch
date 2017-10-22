@@ -63,8 +63,8 @@ export default class PointsDashboard extends Component {
         <div className={styles.searchHeader}> 
           <CardGroup>
             <Card>
-              <h1>Welcome to your dashboard!</h1>
-              <p>This is where you can view and sell the points you have available.</p>
+              <h1>Your Rewards</h1>
+              <p>Your Dashboard is where you can view your points, redeem them for offers, or sell them.</p>
             </Card>
             <Card>
               {rewardsAccountsDetails.map(({ accountDisplayName, rewardsBalance }) => {
