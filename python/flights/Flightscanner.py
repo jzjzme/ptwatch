@@ -6,9 +6,9 @@ flight = PyFlight(api_key='AIzaSyBNFMQ6w1pnPwjAudfZw-iliHUucHRxqiA')
 # parameters:
 adults = 1
 origin = 'SFO'
-price  = 'EUR500'
-dest   = 'LAS'
-date   = '2017-10-20'
+price  = 'USD1000'
+dest   = 'SIN'
+date   = '2017-10-25'
 
 search = flight.search(params={
         'adult_count': '%d'%adults,
@@ -16,7 +16,7 @@ search = flight.search(params={
         'max_price': '%s'%price,
         'destination': '%s'%dest,
         'date': '%s'%date,
-        'solutions': 1
+        'solutions': 15
 })
 
 
@@ -30,7 +30,7 @@ for results in search:
         'price' : results.sale_total()},
         sort_keys=True, indent=4, separators=(',',': '))
 
-# print(output)
+    print(output)
 
-with open('jsondata.txt', 'w') as f:
-  json.dump(output, f, ensure_ascii=False)
+# with open('jsondata.txt', 'w') as f:
+#   json.dump(output, f, ensure_ascii=False)
