@@ -45,7 +45,7 @@ const fakeRewardsAccounts = {
   rewardsAccounts: [
     {
       rewardsAccountReferenceId: "+jaR3Du6APE+x4kQue7NB2l3cLJHm0Rg9qspJbY65DpNtAOoLJnAguw4SVcuOlJuWVrEIiLswYp4ZZ0NX1veFw==",
-      accountDisplayName: "Capital One Visaplatinum Miles *3582",
+      accountDisplayName: "Capital One Rewards",
       rewardsCurrency: "Miles",
       productAccountType: "Credit Card",
       creditCardAccount: {
@@ -87,7 +87,7 @@ const fakeRewardsAccounts = {
 
 
 const fakeRewardsAccountDetails = {
-  accountDisplayName: "Capital One Visaplatinum Miles *3582",
+  accountDisplayName: "Capital One Rewards",
   rewardsBalance: 100000,
   rewardsCurrency: "Miles",
   rewardsCurrencyDescription: "Miles",
