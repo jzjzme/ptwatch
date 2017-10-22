@@ -85,13 +85,13 @@ export default class PointsDashboard extends Component {
                         }
                         <PillInput
                           placeholder={`Out of ${rewardsBalance}`}
-                          value={pointsToSell || ""}
+                          value={pointsToSell || rewardsBalance}
                           onChange={({ target: { value } }) => {
                             this.setPointsToSell(value)
                           }} />
                       </div>
                       <div className={styles.cta}>
-                        <PillButton disabled={!pointsToSell} to={`/points-dashboard/sell-points?points=${pointsToSell}`}>Sell {pointsToSell} Points</PillButton>
+                        <PillButton disabled={!pointsToSell} to={`/points-dashboard/sell-points?points=${pointsToSell || rewardsBalance}`}>Sell {pointsToSell} Points</PillButton>
                       </div>
                     </div>
                   </div>

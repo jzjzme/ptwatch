@@ -70,3 +70,55 @@
     }
   }
 }
+
+.tabs {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  margin: {
+    top: 0;
+    bottom: $vertical-spacing--large;
+    left: auto;
+    right: auto;
+  }
+
+  &:before {
+    content: "Search for...";
+    position: absolute;
+    font-size: 0.85rem;
+    white-space: nowrap;
+    height: 1rem;
+    top: 0;
+    bottom: 0;
+    right: calc(100% + 1rem);
+    margin: auto;
+    color: rgba($color--white, 0.8);
+  }
+}
+
+.tab {
+  cursor: pointer;
+  min-width: 130px;
+  background-color: transparent;
+  color: $color--white;
+  border: 1px solid $color--white;
+  padding: $vertical-spacing--small $horizontal-spacing--normal;
+  text-align: center;
+
+  &.sActive {
+    background-color: $color--white;
+    color: $color--dark-gray;
+  }
+
+  &:first-of-type {
+    border-radius: 8px 0 0 8px;
+  }
+
+  &:last-of-type {
+    border-radius: 0 8px 8px 0;
+  }
+
+  &:not(:first-of-type) {
+    border-left: 0
+  }
+}
