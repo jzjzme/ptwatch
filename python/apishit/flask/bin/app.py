@@ -3,6 +3,7 @@ from flask import Flask, jsonify
 from flask import request
 from pyflights import PyFlight
 import json
+import nexmo #need to install nexmo
 
 app = Flask(__name__)
 flight = PyFlight(api_key='AIzaSyBNFMQ6w1pnPwjAudfZw-iliHUucHRxqiA')
@@ -43,6 +44,23 @@ def search():
 	        sort_keys=True, indent=4, separators=(',',': '))
     
 	return output
+
+@app.route('/message')
+def message():
+
+	client = nexmo.Client(key=' ', secret=' ')
+
+	response = client.send_message({'from': '12012413501', 'to': '19169908919', 'text': 'Someone wants to purchase your points! <link>'})
+
+	response = response['messages'][0]
+
+	if response['status'] == '0':
+	  print ('Sent message', response['message-id'])
+
+	  print ('Remaining balance is', response['remaining-balance'])
+	else:
+	  print ('Error:', response['error-text'])
+
 
 if __name__ == '__main__':
 	app.run(debug=True)
