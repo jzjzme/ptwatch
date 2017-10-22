@@ -9,7 +9,7 @@ const Home = observer(({ store: { user, flight }, history }) => (
     <section className={styles.splash}>
       <div className={styles.splashCopy}>
         <h1 className={styles.header}>Buy flights to anywhere for cheap without any extra hassle.</h1>
-        <h2 className={styles.subHeader}>This is the subheader that nobody reads everrrrrr.</h2>
+        <h2 className={styles.subHeader}>Utilize the PointWatch marketplace.</h2>
       </div>
       <div className={styles.searchWrapper}>
         <PillInput
