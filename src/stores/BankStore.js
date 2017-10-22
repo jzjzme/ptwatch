@@ -58,12 +58,12 @@ const fakeRewardsAccounts = {
     },
     {
       rewardsAccountReferenceId: "+jaR3Du6APE+x4kQue7NB76pzE2EghQD5frCU8NquuYUCjno3GzJDe6bKPmH9nruRwMPivkpoT+3PCwGfwJavg==",
-      accountDisplayName: "Capital One Mastercardworldcard Points *4734",
+      accountDisplayName2: "Singapore KrisFlyer Miles *4734",
       rewardsCurrency: "Points",
       productAccountType: "Credit Card",
       creditCardAccount: {
-        issuer: "Capital One",
-        product: "Mastercardworldcard",
+        issuer: "Visa",
+        product: "Visa Infinite card",
         lastFour: "4734",
         network: "MasterCard",
         isBusinessAccount: false

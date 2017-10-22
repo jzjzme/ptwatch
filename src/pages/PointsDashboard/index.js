@@ -4,6 +4,7 @@ import { stringify } from 'query-string'
 import { Page, Card, CardGroup, Loading, PillButton, PillInput } from 'components'
 import { clientID, clientSecret } from 'utils'
 import cardImage from "../../img/platinum-card.png"
+import cardImage2 from "../../img/sgairlines.png"
 import styles from "./styles.scss"
 
 @inject('store') @observer
@@ -50,6 +51,13 @@ export default class PointsDashboard extends Component {
 
   setPointsToSell (number) {
     this.setState({pointsToSell: number})
+  }
+  selectRewardsAccount (displayName2) {
+    this.setState({ selectedRewardsAccount: displayName2 })
+  }
+
+  setPointsToSell (number2) {
+    this.setState({pointsToSell: number2})
   }
 
   pointsToSell = 0
@@ -123,7 +131,7 @@ export default class PointsDashboard extends Component {
                         <div className={styles.tab}>Redeem</div>
                       </div>
                       <div key={accountDisplayName} className={styles.cardColWrap}>
-                        <img src={cardImage} className={styles.cardImage} />
+                        <img src={cardImage2} className={styles.cardImage} />
                         <div className={styles.cardCol1}>
                           { !pointsToSell &&
                             <label className={styles.label}>How many points would you like to sell?</label>
@@ -135,7 +143,7 @@ export default class PointsDashboard extends Component {
                             placeholder={`Out of ${rewardsBalance}`}
                             value={pointsToSell || rewardsBalance}
                             onChange={({ target: { value } }) => {
-                              this.setPointsToSell(value)
+                              this.setpointsToSell(value)
                             }} />
                         </div>
                         <div className={styles.cta}>
@@ -148,7 +156,7 @@ export default class PointsDashboard extends Component {
                 } else {
                   return (
                     <div key={accountDisplayName} className={styles.cardColWrap}>
-                      <img src={cardImage} className={styles.cardImage} />
+                      <img src={cardImage2} className={styles.cardImage} />
                       <div className={styles.cardCol1}>
                         <h2 className={styles.pointsAvailable}>{accountDisplayName}</h2>
                         <label className={styles.label}><span className={styles.points}>{rewardsBalance}</span> Points Available</label>
