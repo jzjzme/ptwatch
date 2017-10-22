@@ -125,7 +125,7 @@ export default class PointsDashboard extends Component {
             </Card>
             <Card>
               {rewardsAccountsDetails.map(({ accountDisplayName, rewardsBalance }) => {
-                if (accountDisplayName === selectedRewardsAccount) {
+                if (accountDisplayName === "Singapore KrisFlyer Miles *4734") {
                   return (
                     <div>
                       <div className={styles.tabs}>
