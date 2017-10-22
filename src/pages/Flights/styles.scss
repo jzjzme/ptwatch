@@ -2,14 +2,40 @@
 @import "../../styles/base";
 
 .searchHeader {
-  background-color: $color--green;
-  background-image: linear-gradient(-45deg, $color--green, mix($color--green, $color--yellow-pale));
   padding: {
-    top: $vertical-spacing--xlarge;
+    top: $vertical-spacing--large;
     bottom: $vertical-spacing--xlarge;
   }
   margin-bottom: -($vertical-spacing--xlarge + $vertical-spacing--medium);
   color: $color--white;
+  position: relative;
+
+  &:before,
+  &:after {
+    content: "";
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+  }
+
+  &:before {
+    background: {
+      color: $color--green;
+      image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0) 90%), url("../../img/singapore.jpg");
+      size: cover;
+      position: center;
+      repeat: no-repeat;
+    }
+    filter: grayscale(100%) contrast(1) brightness(0.6);
+    mix-blend-mode: multiply;
+  }
+
+  &:after {
+    background-color: $color--green;
+    mix-blend-mode: lighten;
+  }
 
   label {
     color: rgba($color--white, 0.85);

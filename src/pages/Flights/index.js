@@ -14,7 +14,7 @@ const Flights = observer(({ store: { flight: { searchResults } } }) => (
         <div className={styles.searchDetails}>
           <div className={styles.data}>
             <label>Flights to</label>
-            <div>Las Vegas International</div>
+            <div>Singapore Changi Airport</div>
           </div>
           <div className={styles.data}>
             <label>On</label>
