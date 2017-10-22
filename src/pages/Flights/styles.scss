@@ -132,6 +132,7 @@
 .passengerInfo {
   h1 {
     text-align: center;
+    margin-bottom: $vertical-spacing--xlarge;
   }
 }
 
@@ -166,6 +167,12 @@
   }
 
   &:last-of-type {
-    margin-bottom: $vertical-spacing--medium;
+    margin-bottom: $vertical-spacing--large;
   }
+}
+
+.checkoutButton {
+  position: absolute;
+  top: calc(100% + #{$vertical-spacing--medium});
+  right: 0;
 }

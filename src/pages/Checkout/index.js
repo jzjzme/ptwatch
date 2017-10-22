@@ -64,11 +64,13 @@ export default class Checkout extends Component {
             <div className={styles.inputGroup}>
               <PillInput placeholder="Date of Birth" type="date" className={styles.input} />
               <select placeholder="gender" className={`${styles.input} ${styles.mSelect}`}>
-                <option>Male</option>
-                <option>Female</option>
+                <option value="">Select your gender</option>
+                <option value="male">Male</option>
+                <option value="Female">Female</option>
               </select>
             </div>
           </Card>
+          <PillButton className={styles.checkoutButton} to="/">Checkout with Visa</PillButton>
         </CardGroup>
       </Page>
     )
