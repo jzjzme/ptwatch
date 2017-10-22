@@ -27,8 +27,12 @@ export default class Flights extends Component {
             <div className={styles.keyline} />
             <div className={styles.searchDetails}>
               <div className={styles.data}>
-                <label>Flights to</label>
-                <div>Singapore Changi Airport</div>
+                <label>Departing from</label>
+                <div>San Francsico SFO</div>
+              </div>
+              <div className={styles.data}>
+                <label>Arriving to</label>
+                <div>Singapore Changi Airport SIN</div>
               </div>
               <div className={styles.data}>
                 <label>On</label>
@@ -60,7 +64,7 @@ export default class Flights extends Component {
                 </div>
 
                 <div className={styles.hiddenData}>
-                  <h1>Flight to Singapore Changi Airport</h1>
+                  <h1>Singapore Airlines</h1>
                   <div className={styles.hiddenDataItem}>
                     <label>Date</label>
                     <div>{moment(departs_at).format("MMMM Do, YYYY")}</div>
