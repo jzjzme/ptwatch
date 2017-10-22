@@ -1,8 +1,8 @@
 import React from 'react';
 import { Provider as MobxProvider, observer } from 'mobx-react'
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Switch } from 'react-router-dom'
 import { Home, Flights, Login, PointsDashboard } from './pages'
-import { Loading, Navigation } from 'components'
+import { Loading } from 'components'
 import { AppLayout } from './layouts'
 
 

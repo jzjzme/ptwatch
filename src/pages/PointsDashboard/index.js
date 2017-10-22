@@ -13,7 +13,7 @@ export default class PointsDashboard extends Component {
   }
 
   async componentDidMount() {
-    const { access_token, refresh_token } = await this.authorize()
+    const { access_token, refresh_token } = await this.authorize() // eslint-disable-line
     // console.log('ACCESS TOKEN: ', access_token)
     const { bank } = this.props.store
     await bank.getRewardsAccounts()
