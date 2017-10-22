@@ -31,13 +31,18 @@ export default class Flights extends Component {
                 <div>San Francsico SFO</div>
               </div>
               <div className={styles.data}>
-                <label>Arriving to</label>
+                <label>Arriving at</label>
                 <div>Singapore Changi Airport SIN</div>
               </div>
               <div className={styles.data}>
                 <label>On</label>
-                <div>{moment("2017-10-25T22:35-07:00").format("MMMM Do, YYYY")}</div>
+                <div className={styles.editableData}>{moment("2017-10-25T22:35-07:00").format("MMMM Do, YYYY")}</div>
               </div>
+            </div>
+
+            <div className={styles.filters}>
+              <div className={styles.filter}>All Day</div>
+              <div className={styles.filter}>Any Seats</div>
             </div>
           </CardGroup>
         </div>
@@ -58,9 +63,9 @@ export default class Flights extends Component {
                   <label>Arrives At</label>
                   <div>{moment(arrives_at).format('LT')}</div>
                 </div>
-                <div className={styles.data}>
+                <div className={`${styles.data} ${styles.mPrice}`}>
                   <label>Price</label>
-                  <div>{price}</div>
+                  <div className={styles.price}>{price.replace("USD", "$")}</div>
                 </div>
 
                 <div className={styles.hiddenData}>
