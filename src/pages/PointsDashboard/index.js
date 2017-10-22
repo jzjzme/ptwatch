@@ -6,7 +6,7 @@ import { clientID, clientSecret } from 'utils'
 import styles from "./styles.scss"
 
 
-@observer @inject('store')
+@inject('store') @observer
 export default class PointsDashboard extends Component {
   state = {
     loading: true
