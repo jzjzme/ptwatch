@@ -113,6 +113,8 @@ export default class PointsDashboard extends Component {
                       <div className={styles.cardCol1}>
                         <h2 className={styles.pointsAvailable}>{accountDisplayName}</h2>
                         <label className={styles.label}><span className={styles.points}>{rewardsBalance}</span> Points Available</label>
+                        <label className={styles.label}><span className={styles.points}>5000</span> Points in Market</label>
+                        <label className={styles.label}>EXPIRING SOON!</label>
                         <div className={styles.keyline} />
                       <PillButton className={styles.usePointsButton} onClick={() => this.selectRewardsAccount(accountDisplayName)}>Use Points Now!</PillButton>
                       </div>
