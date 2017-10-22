@@ -73,28 +73,28 @@ const fakeSearchResults = [ //Updated SFO->SIN
     arrives_at: "2017-10-26T06:35-08:00",
     date: "2017-10-25",
     departs_at: "2017-10-25T01:15-07:00",
-    id: "1",
+    id: "2",
     price: "USD566.10"
 },
 {
     arrives_at: "2017-10-26T05:30-08:00",
     date: "2017-10-25",
     departs_at: "2017-10-25T01:00-07:00",
-    id: "7",
+    id: "8",
     price: "USD594.10"
 },
 {
     arrives_at: "2017-10-26T05:50-08:00",
     date: "2017-10-25",
     departs_at: "2017-10-25T01:20-07:00",
-    id: "17",
+    id: "18",
     price: "USD594.10"
 },
 {
     arrives_at: "2017-10-26T06:10-08:00",
     date: "2017-10-25",
     departs_at: "2017-10-25T00:50-07:00",
-    id: "873",
+    id: "874",
     price: "USD645.30"
 },
 {
@@ -108,7 +108,7 @@ const fakeSearchResults = [ //Updated SFO->SIN
     arrives_at: "2017-10-26T06:10-08:00",
     date: "2017-10-25",
     departs_at: "2017-10-25T00:50-07:00",
-    id: "873",
+    id: "883",
     price: "USD645.30"
 },
 {
@@ -122,7 +122,7 @@ const fakeSearchResults = [ //Updated SFO->SIN
     arrives_at: "2017-10-26T06:35-08:00",
     date: "2017-10-25",
     departs_at: "2017-10-25T01:15-07:00",
-    id: "1",
+    id: "3",
     price: "USD705.90"
 },
 {

@@ -67,20 +67,50 @@
 }
 
 .flight {
-  transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out, height 0.3s ease-in-out;
   display: flex;
   cursor: pointer;
   color: $color--dark-gray;
   padding: $vertical-spacing--medium $horizontal-spacing--large;
   text-decoration: none;
+  min-height: 0;
+  overflow: hidden;
+  position: relative;
 
   &:hover {
     background-color: darken($color--white, 2%);
   }
 
+  &.sSelected {
+    min-height: 500px;
+
+    .data {
+      display: none;
+    }
+
+    .hiddenData {
+      opacity: 1;
+      pointer-events: initial;
+      transition-delay: 0.5s;
+      transform: translate3d(0, 0, 0);
+    }
+  }
+
   & + & {
     border-top: 1px solid $color--light-gray;
   }
+}
+
+.hiddenData {
+  transition: all 0.1s ease-in-out;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: $vertical-spacing--medium $horizontal-spacing--large;
+  opacity: 0;
+  transform: translate3d(0, -10px, 0);
+  pointer-events: none;
 }
 
 .data {
