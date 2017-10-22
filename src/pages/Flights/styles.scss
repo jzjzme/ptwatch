@@ -33,8 +33,7 @@
   }
 
   &:after {
-    background-color: $color--green;
-    mix-blend-mode: lighten;
+    background-color: rgba(0, 0, 0, 0.5);
   }
 
   label {
@@ -76,7 +75,7 @@
   text-decoration: none;
 
   &:hover {
-    background-color: darken($color--white, 1.5%);
+    background-color: darken($color--white, 2%);
   }
 
   & + & {
