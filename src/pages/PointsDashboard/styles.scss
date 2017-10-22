@@ -83,3 +83,47 @@
   margin-left: $horizontal-spacing--normal;
   text-align: right;
 }
+
+.searchHeader {
+  padding: {
+    top: $vertical-spacing--large;
+    bottom: $vertical-spacing--xlarge;
+  }
+  margin-bottom: -($vertical-spacing--xlarge + $vertical-spacing--large);
+  color: $color--white;
+  position: relative;
+
+  &:before,
+  &:after {
+    content: "";
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+  }
+
+  &:before {
+    background: {
+      color: $color--green;
+      image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0) 90%), url("../../img/singapore.jpg");
+      size: cover;
+      position: center;
+      repeat: no-repeat;
+    }
+    filter: grayscale(100%) contrast(1) brightness(0.6);
+    mix-blend-mode: multiply;
+  }
+
+  &:after {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  label {
+    color: rgba($color--white, 0.85);
+  }
+}
+
+.header {
+  text-shadow: 0 1px 1px rgba(darken($color--green, 35%), 0.3);
+}

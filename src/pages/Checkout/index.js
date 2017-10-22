@@ -72,7 +72,7 @@ export default class Checkout extends Component {
             </div>
           </Card>
           <PillButton className={styles.checkoutButton} onClick={() => fetch(message)
-            .then(alert("Flight purchased!"))}>Checkout with Visa</PillButton>
+            .then(alert("Congratulations on your flight! We will notify you when the flight transaction has been fulfilled"))}>Checkout with Visa</PillButton>
         </CardGroup>
       </Page>
     )

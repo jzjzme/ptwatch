@@ -23,7 +23,7 @@ export default class Flights extends Component {
       <Page>
         <div className={styles.searchHeader}>
           <CardGroup>
-            <h1 className={styles.header}>Search</h1>
+            <h1 className={styles.header}>Flight Search</h1>
             <div className={styles.keyline} />
             <div className={styles.searchDetails}>
               <div className={styles.data}>
