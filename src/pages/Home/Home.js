@@ -12,6 +12,7 @@ const Home = observer(({ store: { user, flight }, history }) => (
         <h1 className={styles.header}>Leveraging Decentralized Credit Card Points for Flights and Rewards</h1>
         <h2 className={styles.subHeader}>Monetize your unused credit card points with PointWatch</h2>
       </div>
+      <div className={styles.keyline} />
       <div className={styles.tabs}>
         <div className={`${styles.tab} ${styles.sActive}`}>Flights</div>
         <div className={styles.tab}>Hotels</div>

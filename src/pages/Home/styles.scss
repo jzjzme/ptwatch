@@ -122,3 +122,18 @@
     border-left: 0
   }
 }
+
+.keyline {
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  height: 1px;
+  width: 40px;
+  background-color: $color--white;
+  margin: {
+    left: auto;
+    right: auto;
+    top: $vertical-spacing--medium;
+    bottom: $vertical-spacing--large;
+  }
+}
