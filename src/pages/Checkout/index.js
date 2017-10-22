@@ -43,7 +43,7 @@ export default class Checkout extends Component {
               </div>
               <div className={styles.data}>
                 <label>Price</label>
-                <div>{price}</div>
+                <div>{price.replace("USD", "$")}</div>
               </div>
             </div>
           </CardGroup>
@@ -70,7 +70,7 @@ export default class Checkout extends Component {
               </select>
             </div>
           </Card>
-          <PillButton className={styles.checkoutButton} to="/">Checkout with Visa</PillButton>
+          <PillButton className={styles.checkoutButton} onClick={() => alert("Flight purchased!")}>Checkout with Visa</PillButton>
         </CardGroup>
       </Page>
     )

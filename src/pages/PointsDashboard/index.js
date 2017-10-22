@@ -3,8 +3,8 @@ import { observer, inject } from 'mobx-react'
 import { stringify } from 'query-string'
 import { Page, Card, CardGroup, Loading, PillButton, PillInput } from 'components'
 import { clientID, clientSecret } from 'utils'
+import cardImage from "../../img/platinum-card.png"
 import styles from "./styles.scss"
-
 
 @inject('store') @observer
 export default class PointsDashboard extends Component {
@@ -48,11 +48,15 @@ export default class PointsDashboard extends Component {
     this.setState({ selectedRewardsAccount: displayName })
   }
 
+  setPointsToSell (number) {
+    this.setState({pointsToSell: number})
+  }
+
   pointsToSell = 0
 
   render () {
     const { rewardsAccountsDetails } = this.props.store.bank
-    const { selectedRewardsAccount } = this.state
+    const { selectedRewardsAccount, pointsToSell } = this.state
     if (this.state.loading) return <Loading />
     return (
       <Page>
@@ -65,23 +69,44 @@ export default class PointsDashboard extends Component {
             {rewardsAccountsDetails.map(({ accountDisplayName, rewardsBalance }) => {
               if (accountDisplayName === selectedRewardsAccount) {
                 return (
-                  <div key={accountDisplayName} className={styles.cardColWrap}>
-                    <div className={styles.cardCol1}>
-                      <label className={styles.label}>How many points would you like to sell?</label>
-                      <PillInput placeholder={`Out of ${rewardsBalance}`} />
+                  <div>
+                    <div className={styles.tabs}>
+                      <div className={`${styles.tab} ${styles.sActive}`}>Sell</div>
+                      <div className={styles.tab}>Redeem</div>
                     </div>
-                    <PillButton to="/points-dashboard/sell-points" params={{ pointsToSell: 500}}>Sell Points Now!</PillButton>
+                    <div key={accountDisplayName} className={styles.cardColWrap}>
+                      <img src={cardImage} className={styles.cardImage} />
+                      <div className={styles.cardCol1}>
+                        { !pointsToSell &&
+                          <label className={styles.label}>How many points would you like to sell?</label>
+                        }
+                        { pointsToSell &&
+                          <label className={styles.label}>You can make <span className={styles.points}>${Math.round(pointsToSell * 1.5) / 100}</span>!</label>
+                        }
+                        <PillInput
+                          placeholder={`Out of ${rewardsBalance}`}
+                          value={pointsToSell || ""}
+                          onChange={({ target: { value } }) => {
+                            this.setPointsToSell(value)
+                          }} />
+                      </div>
+                      <div className={styles.cta}>
+                        <PillButton disabled={!pointsToSell} to={`/points-dashboard/sell-points?points=${pointsToSell}`}>Sell {pointsToSell} Points</PillButton>
+                      </div>
+                    </div>
                   </div>
                 )
 
               } else {
                 return (
                   <div key={accountDisplayName} className={styles.cardColWrap}>
+                    <img src={cardImage} className={styles.cardImage} />
                     <div className={styles.cardCol1}>
-                      <h2 className={styles.pointsAvailable}>You have <b className={styles.points}>{rewardsBalance}</b> points available!</h2>
-                      <label>{accountDisplayName}</label>
+                      <h2 className={styles.pointsAvailable}>{accountDisplayName}</h2>
+                      <label className={styles.label}><span className={styles.points}>{rewardsBalance}</span> Points Available</label>
+                      <div className={styles.keyline} />
+                    <PillButton className={styles.usePointsButton} onClick={() => this.selectRewardsAccount(accountDisplayName)}>Use Points Now!</PillButton>
                     </div>
-                    <PillButton onClick={() => this.selectRewardsAccount(accountDisplayName)}>Sell Points Now!</PillButton>
                   </div>
                 )
               }
