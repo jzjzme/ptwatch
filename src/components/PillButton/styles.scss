@@ -6,6 +6,7 @@
 }
 
 .button {
+  @include box-shadow();
   transition: all 0.15s ease-in-out;
   height: $input--height;
   font-weight: bold;
@@ -13,7 +14,6 @@
     transform: uppercase;
     shadow: 0 1px 0.5px rgba($color--green, 0.3);
   }
-  box-shadow: 0 3px 5px -3px rgba(0, 0, 0, 0.3);
   letter-spacing: 1px;
   color: white;
   background: {
@@ -49,7 +49,7 @@
   }
 
   &:hover {
-    box-shadow: 0 5px 10px -5px rgba(0, 0, 0, 0.3);
+    @include box-shadow(3);
     text-shadow: 0 1px 0.5px rgba(darken($color--green, 10%), 0.4);
 
     &:after {
@@ -58,8 +58,8 @@
   }
 
   &:focus {
+    @include box-shadow(3);
     outline: none;
-    box-shadow: 0 5px 10px -5px rgba(0, 0, 0, 0.3);
     text-shadow: 0 1px 0.5px rgba(darken($color--green, 10%), 0.4);
   }
 
@@ -81,7 +81,7 @@
     }
 
     &:hover {
-       box-shadow: 0 5px 10px -5px rgba(0, 0, 0, 0.3);
+       @include box-shadow(3);
     }
   }
 }
