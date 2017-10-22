@@ -6,9 +6,12 @@ import { Page, Card, CardGroup } from 'components'
 const Flights = observer(({ store: { flight: { searchResults } } }) => (
   <Page>
     <CardGroup>
-      {searchResults.trips.map((flight, i) => (
-        <Card key={`${i}-${flight.di}`}>
-          {flight.departure_name}
+      {/* {searchResults.trips.map((flight, i) => ( */}
+      {searchResults.map(({ arrives_at, departs_at, date, price, id }) => (
+        <Card key={id}>
+          <div>Departs: {departs_at}</div>
+          <div>Arrives: {arrives_at}</div>
+          <div>Price: {price}</div>
         </Card>
       ))}
     </CardGroup>

@@ -5,6 +5,7 @@ import { Page, Card, CardGroup, Loading, PillButton } from 'components'
 import { clientID, clientSecret } from 'utils'
 import styles from "./styles.scss"
 
+
 @observer @inject('store')
 export default class PointsDashboard extends Component {
   state = {
