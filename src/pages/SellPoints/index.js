@@ -25,14 +25,15 @@ export default class SellPoints extends Component {
       <Page>
         <CardGroup>
           <Card>
-            <h1>You're almost done!</h1>
+            <h1>Youre almost done!</h1>
             <label>Number of points to sell</label>
             <div>{points}</div>
             <br />
             <label>Amount to receive</label>
             <div>${Math.round(points * 1.5) / 100}</div>
           </Card>
-          <PillButton className={styles.button} onClick={() => alert("You've sold your points!")}>Sell Points</PillButton>
+          <PillButton className={styles.button} onClick={() => alert("You've sold your points!")
+           }>Sell Points</PillButton>
         </CardGroup>
       </Page>
     )

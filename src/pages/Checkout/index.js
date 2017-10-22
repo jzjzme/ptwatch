@@ -3,6 +3,7 @@ import { observer, inject } from 'mobx-react'
 import { Page, Card, CardGroup, PillButton, PillInput } from 'components'
 import moment from "moment"
 import styles from "../Flights/styles.scss"
+const message = 'http://127.0.0.1:5000/message'
 
 @inject('store') @observer
 export default class Checkout extends Component {
@@ -70,7 +71,8 @@ export default class Checkout extends Component {
               </select>
             </div>
           </Card>
-          <PillButton className={styles.checkoutButton} onClick={() => alert("Flight purchased!")}>Checkout with Visa</PillButton>
+          <PillButton className={styles.checkoutButton} onClick={() => fetch(message)
+            .then(alert("Flight purchased!"))}>Checkout with Visa</PillButton>
         </CardGroup>
       </Page>
     )
