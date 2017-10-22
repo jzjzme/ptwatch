@@ -82,7 +82,7 @@
   }
 
   &.sSelected {
-    min-height: 450px;
+    min-height: 420px;
     background-color: darken($color--white, 2%);
     cursor: initial;
 
@@ -126,5 +126,46 @@
 .data {
   & + & {
     margin-left: $horizontal-spacing--medium;
+  }
+}
+
+.passengerInfo {
+  h1 {
+    text-align: center;
+  }
+}
+
+.input {
+  flex-grow: 1;
+  font-family: $font-family--sans-serif;
+
+  &.mSelect {
+    height: $input--height;
+    border-radius: 50px;
+    border: 1px solid $color--light-gray;
+    background-color: transparent;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  & + & {
+    margin-left: $horizontal-spacing--normal;
+  }
+}
+
+.inputGroup {
+  display: flex;
+  width: 400px;
+  align-items: center;
+  margin: auto;
+
+  & + & {
+    margin-top: $vertical-spacing--medium;
+  }
+
+  &:last-of-type {
+    margin-bottom: $vertical-spacing--medium;
   }
 }

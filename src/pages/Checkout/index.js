@@ -49,17 +49,25 @@ export default class Checkout extends Component {
           </CardGroup>
         </div>
 
-        <CardGroup>
+        <CardGroup className={styles.passengerInfo}>
           <Card>
             <h1>Passenger Information</h1>
-            <PillInput placeholder="First Name" />
-            <PillInput placeholder="Last Name" />
-            <PillInput placeholder="Email" type="email" />
-            <PillInput placeholder="Date of Birth" type="date" />
-            <select placeholder="gender">
-              <option>Male</option>
-              <option>Female</option>
-            </select>
+            <div className={styles.inputGroup}>
+              <PillInput placeholder="First Name" className={styles.input}/>
+              <PillInput placeholder="Last Name" className={styles.input}/>
+            </div>
+
+            <div className={styles.inputGroup}>
+              <PillInput placeholder="Email" type="email" className={styles.input} />
+            </div>
+
+            <div className={styles.inputGroup}>
+              <PillInput placeholder="Date of Birth" type="date" className={styles.input} />
+              <select placeholder="gender" className={`${styles.input} ${styles.mSelect}`}>
+                <option>Male</option>
+                <option>Female</option>
+              </select>
+            </div>
           </Card>
         </CardGroup>
       </Page>
