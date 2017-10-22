@@ -21,3 +21,13 @@ body {
   background-image: radial-gradient(lighten($color--light-gray, 1%) 20%, transparent 20%);
   background-size: 8px 8px;
 }
+
+label {
+  font: {
+    size: 0.8rem;
+    weight: bold;
+  }
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: $color--gray;
+}

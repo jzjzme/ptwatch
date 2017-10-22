@@ -5,7 +5,8 @@
   @include box-shadow(1);
   background-color: $color--white;
   border-radius: 5px;
-  padding: $vertical-spacing--medium $horizontal-spacing--large; 
+  padding: $vertical-spacing--medium $horizontal-spacing--large;
+  text-decoration: none;
 
   & + & {
     margin-top: $vertical-spacing--normal;
@@ -28,16 +29,6 @@
   }
 
   p {
-    color: $color--gray;
-  }
-
-  label {
-    font: {
-      size: 0.8rem;
-      weight: bold;
-    }
-    letter-spacing: 1px;
-    text-transform: uppercase;
     color: $color--gray;
   }
 }
