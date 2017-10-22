@@ -1,0 +1,50 @@
+
+.noVideo .videoContainer video,
+.touch .videoContainer video {
+    display: none;
+}
+.noVideo .videoContainer .poster,
+.touch .videoContainer .poster {
+    display: block !important;
+}
+.videoContainer {
+    position: absolute;
+    top: -10px;
+    bottom: -10px;
+    left: -10px;
+    right: -10px;
+    z-index: 1;
+    overflow: hidden;
+    background: #000;
+    filter: grayscale(100%) contrast(1) brightness(0.6) blur(2px);
+
+    &:after {
+        content: "";
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        position: absolute;
+        z-index: 2;
+        background-color: rgba(0,0,0,0.6);
+    }
+}
+.videoContainer .poster img {
+    width: 100%;
+    bottom: 0;
+    position: absolute;
+}
+.videoContainer .filter {
+    z-index: 100;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.4);
+    width: 100%;
+}
+.videoContainer video {
+    position: absolute;
+    z-index: 0;
+    bottom: 0;
+}
+.videoContainer video.fillWidth {
+    width: 100%;
+}

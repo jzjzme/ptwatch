@@ -41,7 +41,7 @@ export default class Flights extends Component {
             </div>
 
             <div className={styles.filters}>
-              <div className={styles.filter}>All Day</div>
+              <div className={styles.filter}>Any Time</div>
               <div className={styles.filter}>Any Seats</div>
             </div>
           </CardGroup>
@@ -96,5 +96,3 @@ export default class Flights extends Component {
     )
   }
 }
-
-// export default inject('store')(Flights)

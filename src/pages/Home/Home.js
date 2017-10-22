@@ -1,12 +1,13 @@
 import React from 'react'
 import { withRouter } from 'react-router-dom'
 import { observer, inject } from 'mobx-react'
-import { Page, PillButton, PillInput } from 'components'
+import { Page, PillButton, PillInput, VideoBackground } from 'components'
 import styles from "./styles.scss"
 
 const Home = observer(({ store: { user, flight }, history }) => (
   <Page>
     <section className={styles.splash}>
+      <VideoBackground />
       <div className={styles.splashCopy}>
         <h1 className={styles.header}>Buy flights to anywhere for cheap without any extra hassle.</h1>
         <h2 className={styles.subHeader}>Utilize the PointWatch marketplace.</h2>
