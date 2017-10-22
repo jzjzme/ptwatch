@@ -60,8 +60,24 @@ export default class Flights extends Component {
                 </div>
 
                 <div className={styles.hiddenData}>
-                  <h1>Flight to Singapore</h1>
-                  <PillButton to={`/flights/book/${id}`}>Book Flight</PillButton>
+                  <h1>Flight to Singapore Changi Airport</h1>
+                  <div className={styles.hiddenDataItem}>
+                    <label>Date</label>
+                    <div>{moment(departs_at).format("MMMM Do, YYYY")}</div>
+                  </div>
+                  <div className={styles.hiddenDataItem}>
+                    <label>Departs At</label>
+                    <div>{moment(departs_at).format('LT')}</div>
+                  </div>
+                  <div className={styles.hiddenDataItem}>
+                    <label>Arrives At</label>
+                    <div>{moment(arrives_at).format('LT')}</div>
+                  </div>
+                  <div className={styles.hiddenDataItem}>
+                    <label>Price</label>
+                    <div>{price}</div>
+                  </div>
+                  <PillButton className={styles.hiddenButton} to={`/flights/book/${id}`}>Book Flight Now</PillButton>
                 </div>
               </div>
             ))}

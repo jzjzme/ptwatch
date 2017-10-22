@@ -82,7 +82,9 @@
   }
 
   &.sSelected {
-    min-height: 500px;
+    min-height: 450px;
+    background-color: darken($color--white, 2%);
+    cursor: initial;
 
     .data {
       display: none;
@@ -111,6 +113,14 @@
   opacity: 0;
   transform: translate3d(0, -10px, 0);
   pointer-events: none;
+}
+
+.hiddenDataItem {
+  margin-bottom: $vertical-spacing--medium;
+}
+
+.hiddenButton {
+  float: right;
 }
 
 .data {
