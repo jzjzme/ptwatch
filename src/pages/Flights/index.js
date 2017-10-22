@@ -28,11 +28,11 @@ export default class Flights extends Component {
             <div className={styles.searchDetails}>
               <div className={styles.data}>
                 <label>Departing from</label>
-                <div>San Francsico SFO</div>
+                <div className={styles.editableData}>San Francsico SFO</div>
               </div>
               <div className={styles.data}>
                 <label>Arriving at</label>
-                <div>Singapore Changi Airport SIN</div>
+                <div className={styles.editableData}>Singapore Changi Airport SIN</div>
               </div>
               <div className={styles.data}>
                 <label>On</label>

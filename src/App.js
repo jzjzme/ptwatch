@@ -14,7 +14,8 @@ export const App = observer(({ store }) => store.loading ? <Loading /> : (
         <AppLayout exact path='/flights' component={Flights} />
         <AppLayout path='/flights/book/:id' component={Checkout} />
         <AppLayout path='/login' component={Login} />
-        <AppLayout path='/points-dashboard' component={PointsDashboard} />
+        <AppLayout exact path='/points-dashboard' component={PointsDashboard} />
+        <AppLayout path='/points-dashboard/sell-points' component={PointsDashboard} />
       </Switch>
     </Router>
   </MobxProvider>
